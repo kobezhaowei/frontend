@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wish List</title>
+</head>
+
+<body>
+    Input your wish: <input type="text" id="wish" /><br>
+    <button id="add" onclick="addWish()"> ADD </button><br>
+    <h3> My Wishes </h3>
+    <ul id="l">
+    </ul>
+</body>
+
+<script>
+    function addWish() {
+        var content = document.getElementById('wish').value;
+        var line = "<li>" + content + " <br> <button onclick = 'del(this)'> Delete </button></li>";
+        document.getElementById('l').innerHTML += line;
+    }
+    function del(obj) {
+        obj.parentNode.style.display = "none";
+    }
+</script>
+
+</html>

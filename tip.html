@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id='value' placeholder="enter amount">
+    <input type="text" id='tex' placeholder="enter a float tex rate">
+    <input type="text" id="total" value='0'>
+    <button id="button" onclick="total()">Total</button>
+
+    <script>
+        function total() {
+            var oInput = document.getElementById('value').value;
+            var oTex = document.getElementById('tex').value;
+            var oTotal = document.getElementById('total');
+            var num = (parseFloat(oInput) + (parseFloat(oInput) * parseFloat(oTex)));
+            oTotal.value = num;
+        }
+    </script>
+</body>
+
+</html>
